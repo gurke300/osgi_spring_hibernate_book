@@ -1,4 +1,4 @@
-= Hibernate In OSGi =
+# Hibernate In OSGi
 In this chapter we are going to prepare our environment to be able to utilize the Hibernate
 engine.
 We will enhance the PaxExamProvisioningSupport class to provide the container with the dependencies.
