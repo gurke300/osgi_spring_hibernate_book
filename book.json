@@ -1,0 +1,7 @@
+{
+    "plugins": [
+        "mathjax",
+        "js-sequence-hand-diagram"
+    ],
+    "pluginsConfig": {}
+}
