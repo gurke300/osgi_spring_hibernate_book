@@ -1,6 +1,6 @@
 = Moving legacy code based on Hibernate 4 and Spring 4 to an OSGi friendly version =
 [OSGi](www.osgi.org). Since I heard of OSGi I was convinced of the concept providing a dynamic runtime environment for software modules. In 2009 a former colleague of me and I were thinking about a plugin mechanism to enhance the functionality of our core component without tightly couple the code base to these (optional) functional extensions.
-But at this time it was not so easy to find good material about OSGi and so we decided to use  the [**J**ava **P**lugin **F**ramework](http://jpf.sourceforge.net/) which felt more familiar to us.
+But at this time it was not so easy to find good material about OSGi and so we decided to use  the [*J*ava *P*lugin *F*ramework](http://jpf.sourceforge.net/) which felt more familiar to us.
 
 As I heard of the OSGi Enterprise specification approach and the Spring team entering the OSGi world with its Spring DM server I really thought that OSGi would soon become a standard in the Java enterprise universe. But then Springsource decided to quit their efforts and submitted their Spring DM Server Solution to the eclipse community where it is going on as Eclipse Virgo. Besides that there are quite a few voices (from known experts but also keep an eye on the dates) that will not encourage you to use OSGi technology.
 
