@@ -267,6 +267,3 @@ org.ops4j.pax.logging.pax-logging-api[org.ops4j.pax.swissbox.extender.BundleWatc
 The first bundle is "injected" by the pax exam framework in order to resolve the *@javax.inject.Inject* annotation within the test. The second bundle is the one the pax exam framework creates automatically from your test. In that way your test classes becoming runable OSGi bundles.
 
 [![Build Status](https://www.gitbook.io/button/status/book/gurke300/osgi-with-spring-4-and-hibernate-4)](https://www.gitbook.io/book/gurke300/osgi-with-spring-4-and-hibernate-4/activity)
-
-
-
