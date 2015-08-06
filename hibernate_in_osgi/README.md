@@ -1,10 +1,10 @@
-= Hibernate In OSGi =
+# Hibernate In OSGi
 In this chapter we are going to prepare our environment to be able to utilize the Hibernate
 engine.
 We will enhance the PaxExamProvisioningSupport class to provide the container with the dependencies.
 At least we will configure the Apache Felix OSGi container to solve some dependency resolution problems.
 
-== Provisioning the OSGi Container ==
+## Provisioning the OSGi Container
 The Hibernate engine is a powerful tool for communicating with a relational database and with that it comes with several dependencies as:
 
  * a bytecode generator for its powerful proxy mechanism
