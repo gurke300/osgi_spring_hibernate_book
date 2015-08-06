@@ -1,8 +1,11 @@
 = Moving from Spring to OSGi Blueprint =
-OSGi Blueprint was defined in the OSGi Enterprise specification. It has its roots in the Spring Dynamic Modules project and that's the good news: If you know Spring then OSGi Blueprint will look very familiar to you.
-Allthough OSGi Blueprint is not that powerful as it lacks some possibilities in defining beans (e.g. no *abstract* or *parent* beans definitions) it is a great option to bootstrap a bundle's logic and interact with the OSGi container using services.
 
-OSGi Blueprint defines some mechanisms to extend the container's behaviour. So you can define your own *TypeConverter*s to bind bean definitions to certain types. As known from Spring you can define custom namespacehandler to enhance xml configuration options for application specific components.
+OSGi Blueprint was defined in the OSGi Enterprise specification. It has its roots in the Spring Dynamic Modules project.
+If you know Spring then OSGi Blueprint will look very familiar to you.
+Allthough OSGi Blueprint is not that powerful as it lacks some possibilities in defining beans (e.g. no
++abstract+ or +parent+ beans definitions) it is a great option to bootstrap a bundle's logic and interact with the OSGi container using services.
+
+OSGi Blueprint defines some mechanisms to extend the container's behaviour. So you can define your own +Converter+ to bind bean definitions to certain types. As known from Spring you can define custom namespacehandler to enhance xml configuration options for application specific components.
 
 In this section we are going to see how we can use OSGi Blueprint to define beans/services and how we can interact with the Blueprint container. It is highly recommended to also take a look into the OSGi Blueprint Specification which is very well written.
 
