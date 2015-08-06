@@ -171,8 +171,6 @@ Another drawback is that you might need to add other bundles to export
 those removed packages again, because of other bundles requiring them.
 =====================================================================
 
-
-
 == The Hibernate OSGi Project ==
 * Hibernate 4 Services via java.util.ServiceLoader
 * Transactions
