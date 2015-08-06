@@ -1,4 +1,4 @@
-# Moving from Spring to OSGi Blueprint
+= Moving from Spring to OSGi Blueprint =
 OSGi Blueprint was defined in the OSGi Enterprise specification. It has its roots in the Spring Dynamic Modules project and that's the good news: If you know Spring then OSGi Blueprint will look very familiar to you.
 Allthough OSGi Blueprint is not that powerful as it lacks some possibilities in defining beans (e.g. no *abstract* or *parent* beans definitions) it is a great option to bootstrap a bundle's logic and interact with the OSGi container using services.
 
@@ -6,24 +6,26 @@ OSGi Blueprint defines some mechanisms to extend the container's behaviour. So y
 
 In this section we are going to see how we can use OSGi Blueprint to define beans/services and how we can interact with the Blueprint container. It is highly recommended to also take a look into the OSGi Blueprint Specification which is very well written.
 
-In the first X sections some basics will be shown to prepare for moving from Spring to OSGi Blueprint.
+In the first [red] X sections some basics will be shown to prepare for moving from Spring to OSGi Blueprint.
 
-## Choosing An OSGi Blueprint Implementation
+== Choosing An OSGi Blueprint Implementation ==
 As OSGi just specifies the Blueprint API you are going to look for an implementation. Currently there are two (both OpenSource) Blueprint implementations:
-* [Apache Aries](http://aries.apache.org/) Blueprint and
-* [Eclipse Gemini Blueprint](http://www.eclipse.org/gemini/blueprint/documentation/reference/1.0.2.RELEASE/html/index.html).
 
-### Eclipse Gemini Blueprint
+* link:http://aries.apache.org/[Apache Aries] Blueprint and
+* link:http://www.eclipse.org/gemini/blueprint/documentation/reference/1.0.2.RELEASE/html/index.html[Eclipse Gemini Blueprint].
+
+=== Eclipse Gemini Blueprint ===
 Eclipse Gemini Blueprint has its origins in the Spring Dynamic Module project and has a very good spring support.
-The Eclipse Gemini Blueprint implementation goes further than the OSGi Blueprint specification and integrate Spring capabilities into OSGi. E.g. you can use Spring's *Aware*-interfaces or autowiring capabilities. The list of extensions compared to the specification can be read [in the Eclipse Gemini Blueprint documentation](http://www.eclipse.org/gemini/blueprint/documentation/reference/1.0.2.RELEASE/html/blueprint.html)
+The Eclipse Gemini Blueprint implementation goes further than the OSGi Blueprint specification and integrate Spring capabilities into OSGi. E.g. you can use Spring's *Aware*-interfaces or autowiring capabilities. The list of extensions compared to the specification can be read link:http://www.eclipse.org/gemini/blueprint/documentation/reference/1.0.2.RELEASE/html/blueprint.html[in the Eclipse Gemini Blueprint documentation]
 
 But there is a big disadvantage. In its current Milestone release version (2.0.0 M2) it is bound to Spring 3.x.
 Allthough Eclipse Gemini Blueprint makes it easier to use Spring based applications within OSGi it is bound to Spring 3.
 
 Because we are going to use Spring 4 we will configure our application using Apache Aries Blueprint implementation.
 
-### Apache Aries Blueprint
+=== Apache Aries Blueprint ===
 *Apache Aries Blueprint* in contrast to *Eclipse Gemini Blueprint* is a less feature rich *Blueprint Specification* implementation. It has support for
+
 * managed properties,
 * property replacement like Spring and
 * declarative transactions.
@@ -76,9 +78,9 @@ OSGi Blueprint uses xml files in which application logic is declarativly listed.
 *OSGI-INF/blueprint/* by default. The Blueprint Extender Service will look for all xml files under this location and will create a Blueprint Container which corresponds to Spring's application context.
 Here is the first blueprint configuration.
 ```
-<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" 
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0                   http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd" 
+    xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0                   http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"
     default-availability="mandatory">
 
     <bean id="helloBean" class="com.mycomp.shop.HelloBean"/>
