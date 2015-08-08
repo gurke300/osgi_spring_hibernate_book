@@ -4,11 +4,11 @@ But at this time it was not so easy to find good material about OSGi and so we d
 
 As I heard of the OSGi Enterprise specification approach and the Spring team entering the OSGi world with its Spring DM server I really thought that OSGi would soon become a standard in the Java enterprise universe. But then Springsource decided to quit their efforts and submitted their Spring DM Server Solution to the eclipse community where it is going on as Eclipse Virgo. Besides that there are quite a few voices (from known experts but also keep an eye on the dates) that will not encourage you to use OSGi technology.
 
-* [red]*TODO: Add some links here*
+* [red]#*TODO: Add some links here*#
 
 But you could also find different voices saying the opposit.
 
-* [red]*TODO: Add some links here*
+* [red]#*TODO: Add some links here*#
 
 To make one thing clear: I write this book without judging about OSGi. In fact I am still convinced about this technology. With this book I just would like to show which problems I faced and how I could solve them. But as a newbie I find it hard to gather good entry material to this technology and the development. And of course you run into troubles that are not mentioned in the books or for which it is hard to find approaches to fix them.
 In order to understand the technology I highly recommend these books that I used to understand OSGi. A very good book from O'Reilly is:

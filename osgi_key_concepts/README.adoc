@@ -1,0 +1,27 @@
+= OSGi Key concepts =
+
+I won't give here a detailed explanation what OSGi is. There are a lot of good explanations out there.
+[red]#TODO: provide a link to the specification#
+In short: OSGi is a standardized technology. It defines a runtime for software resources. 
+Those resources are called _bundles_. But what OSGi distinguishes from other
+
+
+== Basic Terminology ==
+
+Resources, Bundles, Container, Lifecycle
+Bundles are simple jar files (or can be any other resources, if a handler is present withint the OSGi environment) that define metadata within the Manifest.mf file.**Export-Package**
+
+== Basic Provisioning of an OSGi Container ==
+
+* Starting and stopping a container
+* using the apache gogo shell
+
+== Some thoughts on IDEs ==
+If you are coming from Web Development, no matter which of the big Java IDEs Intellij, Eclipse, Netbeans you use: if you develop Maven based Java EE Applications whether WAR or EAR projects you get a quite good support from your IDE. Also Spring is widly supported within the IDEs e.g. giving you code completion in spring xml configuration or hints in source files.
+
+For OSGi development it looks different. If you are looking for plugins only Eclipse offers a good plugin solution link:http://bndtools.org/[Bnd Tools]. It is also used within the book from O'Reilly: link:http://shop.oreilly.com/product/0636920028086.do[Building Modular Cloud Apps with OSGi].
+
+But if you are used to develop software using Maven (or any other build tool capable of resolving dependencies) then you will face the first wall the needs to be taken.
+In the beginning Bndtools felt quite good, allthough it differs from developing maven projects.
+Netbeans has some kind of support if you develop Netbeans Modules. But I ended up using plain Maven projects, because those can run in a general CI environment with Maven support out of the box.
+About OSMORC the OSGi plugin from Intellij I cannot say anything because I have not used it.

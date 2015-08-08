@@ -9,7 +9,7 @@ OSGi Blueprint defines some mechanisms to extend the container's behaviour. So y
 
 In this section we are going to see how we can use OSGi Blueprint to define beans/services and how we can interact with the Blueprint container. It is highly recommended to also take a look into the OSGi Blueprint Specification which is very well written.
 
-In the first [red] X sections some basics will be shown to prepare for moving from Spring to OSGi Blueprint.
+In the first sections some basics will be shown to prepare for moving from Spring to OSGi Blueprint.
 
 == Choosing An OSGi Blueprint Implementation ==
 As OSGi just specifies the Blueprint API you are going to look for an implementation. Currently there are two (both OpenSource) Blueprint implementations:
@@ -153,10 +153,11 @@ public class RunOSGiWithProvisioningSupportIT {
 }
 -------------------------------------------
 If you look at this test case you can see that beside our defined beans, Blueprint is publishing some more for us.
-Next to our *helloBean* there is the
+Next to our `helloBean` there is the
 
-<1> +BlueprintContainer+ that allows us to interact with it (listing bean definitions or looking up bean instances)
-<2> the second one is the +BundleContext+ which comes via its blueprint bean name +blueprintBundleContext+.
+
+<1> `BlueprintContainer`  that allows us to interact with it (listing bean definitions or looking up bean instances)
+<2> the second one is the `BundleContext` which comes via its blueprint bean name blueprintBundleContext`.
 
 In the code example you can see how we interact with the +BlueprintContainer+.
 [source, java]
@@ -182,7 +183,7 @@ So OSGi Blueprint gives you the possibility to create bundles that can be bootst
 == Extending The Type Conversion With Custom TypeConverters ==
 Compared to Spring, Apache Aries blueprint implementation is not that powerful if it comes to implicit type conversion.
 To be able to extend the type conversion capabilities of the Blueprint Container the OSGi Blueprint Spec defines a mechanism called *TypeConverter*.
-A +Converter+ is needed if you are dealing with property types which are not covered by the built in type converters.
+A `Converter` is needed if you are dealing with property types which are not covered by the built in type converters.
 
 As a simple example we will create a simple +Converter+ implementation. Its purpose is to convert properties that ends on +.class+ into the appropriate class object.
 Imagine we have a service registry class which handle service instances by their classes.
@@ -205,13 +206,15 @@ public class VerySimpleServiceRegistry {
 <1> providing a class we will return the service registered by this class.
 
 Furthermore imagine their is some magical registration process and somehow we can
-expect to find a +HelloBean+ service that should be registered within the +BlueprintContainer+.
+expect to find a `HelloBean` service that should be registered within the `BlueprintContainer`.
 We could write now a bean definition like the following.
 [source, xml]
 -----------------------
+[...]
 <bean id="helloBeanService" factory-ref="verySimpleServiceRegistry" factory-method="getRegisteredService">
     <argument value="com.mycomp.shop.HelloBean.class" />
 </bean>
+[...]
 -----------------------
 
 In order to let that work we need a converter like the one below.
@@ -260,13 +263,13 @@ public class ClassInstanceCreater implements Converter {                        
 }
 -----------------------
 
-<1> a converter is written using the +org.osgi.service.blueprint.container.Converter+ interface
+<1> a converter is written using the `org.osgi.service.blueprint.container.Converter` interface
 <2> we overwrite the method +canConvert+ to control which properties should be converted by this converter
-<3> within the +convert+ method we implement the conversion
+<3> within the `convert` method we implement the conversion
 <4> in this line we load the class from within the bundle. this requires that the properties only refer to a class residing within the bundle. Later we will see an example to load classes from outside of this bundle.
 
-All we need to do now is to registering it within the +BlueprintContainer+. We do so by adding a
-+type-converters+ section within the +blueprint.xml+ file.
+All we need to do now is to registering it within the `BlueprintContainer`. We do so by adding a
+`type-converters` section within the `blueprint.xml` file.
 
 [source,xml]
 -----------------------
@@ -284,7 +287,7 @@ All we need to do now is to registering it within the +BlueprintContainer+. We d
 -----------------------
 <1> in the +type-converters+ section we list the converter classes as simple beans.
 
-In the following sections we will meet those parts again. Especially the +Converter+.
+In the following sections we will meet those parts again. Especially the `Converter`.
 
 == Summary ==
 The blueprint specification provides us with a powerful mechanism to declaratively define beans and services.
@@ -294,10 +297,10 @@ Both has their pros and cons. Whereas the *Eclipse Gemini* is driving for a high
 *Apache Arias* is close to the _OSGi Blueprint_ specification.
 
 We created a little test in which we were loading an OSGi container together with a _Blueprint-driven_ bundle.
-We saw a bit of the blueprint api, that let us interact with the +BlueprintContainer+ via its corresponding interface.
+We saw a bit of the blueprint api, that let us interact with the `BlueprintContainer` via its corresponding interface.
 We registered a service within the OSGi container.
 
-In section 3 we implemented a blueprint +Converter+ which alowed us to implement custom property binding within the +BlueprintContainer+
+In section 3 we implemented a blueprint `Converter` which alowed us to implement custom property binding within the +BlueprintContainer+
 
 But not to forget there is a another OSGi specification covering the declarative management of OSGi Services.
 Its name is simply _Declarative Services_ and it is widely used within the OSGi community.
