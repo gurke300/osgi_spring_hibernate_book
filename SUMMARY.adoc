@@ -2,5 +2,6 @@
 
 . link:README.adoc[Introduction]
 . link:the_legacy_code_project/README.adoc[The Legacy Code Project]
+. link:project_template_for_running_osgi_integration_tests/README.adoc[Using Pax Exam to run OSGi Integration Tests]
 . link:moving_from_spring_to_osgi_blueprint\README.adoc[Moving From Spring To OSGi Blueprint]
 . link:hibernate_in_osgi/README.adoc[Hibernate in OSGi]
