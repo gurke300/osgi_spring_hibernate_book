@@ -1,17 +1,48 @@
-= OSGi Key concepts =
+= OSGi Key concepts
 
-I won't give here a detailed explanation what OSGi is. There are a lot of good explanations out there.
-[red]#TODO: provide a link to the specification#
-In short: OSGi is a standardized technology. It defines a runtime for software resources. 
-Those resources are called _bundles_. But what OSGi distinguishes from other
+I won't give here a detailed explanation what OSGi is. There are a lot of good explanations out there. For a great overviesw I can recommend the RefCard link:https://dzone.com/storage/assets/4263-rc037-010d-equinox.pdf[Getting Started with Equinox & OSGi] written by Jeff McAffer. It is about using equinox which is an implementation of the OSGi specification. You might need to register to read the card. It is free and gives you access to great content.
+
+At this place I highly recommend to download the OSGi specs. They are well written and a great source to find out how thinks are (at least) supposed to work:
+
+link:http://www.osgi.org/Download/HomePage[OSGi Spec Downloads]
+
+Here is what the specification says what the OSGi framework is:
 
 
-== Basic Terminology ==
+[quote, OSGi Alliance, OSGi Core Specification 6, p.9]
+____________________________________________________________________
+It provides a general-purpose, secure, and
+managed Java framework that supports the deployment of extensible and downloadable applications
+known as bundles.
+____________________________________________________________________
 
-Resources, Bundles, Container, Lifecycle
-Bundles are simple jar files (or can be any other resources, if a handler is present withint the OSGi environment) that define metadata within the Manifest.mf file.**Export-Package**
+It is important to understand that the OSGi world distinguishes between different specifications. For Release 5 in 2012 there were 2 specifications:
 
-== Basic Provisioning of an OSGi Container ==
+1. OSGi Core and 
+1. OSGi Enterprise
+
+Since Release 6 the specifications have been reorganized into:
+
+OSGi Core (June 2014):: Defines the basic framework. Basically it covers the definition of 
+* bundles
+* their lifecycle (installation, resolution, starting, etc.)
+* dependencies between bundles and their resolution
+* certain APIs to interact with the OSGi container.
+OSGi Enterprise (July 2015):: The enterprise specification drives to integrate Java EE features into the OSGi framework. In this specification services are defined that cover JavaEE aspects like:
+* JTA container managed transactions,
+* JDBC Driver management and
+* services for logging, administration, configuration, ReST, etc.
+OSGi Residential (July 2015):: Specifies an API for large scale remote management of OSGi framework and their applications/services.
+OSGi Compendium (July 2015):: Is the compendium of all OSGi service specifications.
+
+== Basic Terminology
+The core component an OSGi framework handles is the so called _bundle_.
+In general a bundle is a simple jar file that inlcudes OSGi-specific *headers* within its *META-INF/MANIFEST.mf* file.
+
+The core specification R6 lists 23 headers. 
+
+
+== Basic Provisioning of an OSGi Container
 
 * Starting and stopping a container
 * using the apache gogo shell
