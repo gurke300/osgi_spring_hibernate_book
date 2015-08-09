@@ -11,7 +11,7 @@ Those resources are called _bundles_. But what OSGi distinguishes from other
 Resources, Bundles, Container, Lifecycle
 Bundles are simple jar files (or can be any other resources, if a handler is present withint the OSGi environment) that define metadata within the Manifest.mf file.**Export-Package**
 
-== Basic Provisioning of an OSGi Container ==
+== Basic Provisioning of an OSGi Container
 
 * Starting and stopping a container
 * using the apache gogo shell
