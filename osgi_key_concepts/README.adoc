@@ -1,4 +1,4 @@
-= OSGi Key concepts =
+= OSGi Key concepts
 
 I won't give here a detailed explanation what OSGi is. There are a lot of good explanations out there.
 [red]#TODO: provide a link to the specification#
@@ -6,7 +6,7 @@ In short: OSGi is a standardized technology. It defines a runtime for software r
 Those resources are called _bundles_. But what OSGi distinguishes from other
 
 
-== Basic Terminology ==
+== Basic Terminology
 
 Resources, Bundles, Container, Lifecycle
 Bundles are simple jar files (or can be any other resources, if a handler is present withint the OSGi environment) that define metadata within the Manifest.mf file.**Export-Package**
