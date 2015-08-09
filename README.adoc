@@ -41,7 +41,7 @@ And as mentioned in the book's title we will focus on the persistence part of th
 
 Additionally I would be very happy if you could give me feedback and or participate on this book. I would like to help others in using OSGi and to collect solutions/patterns for web development based on OSGi (with your participation very very appreciated).
 
-== Structure of the book ==
+== Structure of the book
 
 Chapter 1:: will describe the legacy project and of which parts it is build up. It will contain a domain model that consists of quite a few entities. I will point out some facts that may challenge us on our refactoring.
 Chapter 2:: will list the key concepts about OSGi from a high level perspective. This is important because I found it hard to get easy to understand documentation. And I am going to talk about IDE Support.
