@@ -16,7 +16,7 @@ Bundles are simple jar files (or can be any other resources, if a handler is pre
 * Starting and stopping a container
 * using the apache gogo shell
 
-== Some thoughts on IDEs ==
+== Some thoughts on IDEs
 If you are coming from Web Development, no matter which of the big Java IDEs Intellij, Eclipse, Netbeans you use: if you develop Maven based Java EE Applications whether WAR or EAR projects you get a quite good support from your IDE. Also Spring is widly supported within the IDEs e.g. giving you code completion in spring xml configuration or hints in source files.
 
 For OSGi development it looks different. If you are looking for plugins only Eclipse offers a good plugin solution link:http://bndtools.org/[Bnd Tools]. It is also used within the book from O'Reilly: link:http://shop.oreilly.com/product/0636920028086.do[Building Modular Cloud Apps with OSGi].
