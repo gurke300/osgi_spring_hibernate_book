@@ -3,11 +3,9 @@
 I won't give here a detailed explanation what OSGi is. There are a lot of good explanations out there. For a great overviesw I can recommend the RefCard link:https://dzone.com/storage/assets/4263-rc037-010d-equinox.pdf[Getting Started with Equinox & OSGi] written by Jeff McAffer. It is about using equinox which is an implementation of the OSGi specification. You might need to register to read the card. It is free and gives you access to great content.
 
 At this place I highly recommend to download the OSGi specs. They are well written and a great source to find out how thinks are (at least) supposed to work:
-
 link:http://www.osgi.org/Download/HomePage[OSGi Spec Downloads]
 
 Here is what the specification says what the OSGi framework is:
-
 
 [quote, OSGi Alliance, OSGi Core Specification 6, p.9]
 ____________________________________________________________________
@@ -47,7 +45,7 @@ The core specification R6 lists 23 headers.
 * Starting and stopping a container
 * using the apache gogo shell
 
-== Some thoughts on IDEs ==
+== Some thoughts on IDEs
 If you are coming from Web Development, no matter which of the big Java IDEs Intellij, Eclipse, Netbeans you use: if you develop Maven based Java EE Applications whether WAR or EAR projects you get a quite good support from your IDE. Also Spring is widly supported within the IDEs e.g. giving you code completion in spring xml configuration or hints in source files.
 
 For OSGi development it looks different. If you are looking for plugins only Eclipse offers a good plugin solution link:http://bndtools.org/[Bnd Tools]. It is also used within the book from O'Reilly: link:http://shop.oreilly.com/product/0636920028086.do[Building Modular Cloud Apps with OSGi].
