@@ -1,4 +1,4 @@
-= Moving legacy code based on Hibernate 4 and Spring 4 to an OSGi friendly version =
+= Moving legacy code based on Hibernate 4 and Spring 4 to an OSGi friendly version
 link:(www.osgi.org)[OSGi]. Since I heard of OSGi I was convinced of the concept providing a dynamic runtime environment for software modules. In 2009 a former colleague of me and I were thinking about a plugin mechanism to enhance the functionality of our core component without tightly couple the code base to these (optional) functional extensions.
 But at this time it was not so easy to find good material about OSGi and so we decided to use  the [*J*ava *P*lugin *F*ramework](http://jpf.sourceforge.net/) which felt more familiar to us.
 
