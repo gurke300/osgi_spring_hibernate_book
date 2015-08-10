@@ -33,10 +33,6 @@ import org.osgi.framework.BundleContext;
 
 import javax.inject.Inject;
 
-/**
- *
- * @author Stephan
- */
 @RunWith(PaxExam.class)
 public class RunOSGiContainerIT {
 
