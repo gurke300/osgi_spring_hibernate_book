@@ -38,12 +38,26 @@ The core component an OSGi framework handles is the so called _bundle_.
 In general a bundle is a simple jar file that inlcudes OSGi-specific *headers* within its *META-INF/MANIFEST.mf* file.
 
 The core specification R6 lists 23 headers. 
-
+[red]#*list the important header*#
 
 == Basic Provisioning of an OSGi Container
+In this section we are going to download an OSGi container. We will use http://felix.apache.org[Apache Felix].
 
-* Starting and stopping a container
-* using the apache gogo shell
+Go and download the last distribution from http://felix.apache.org/downloads.cgi[here].
+The current (August 2015) release is 5.0.1. Extract the archive to destination folder of your choice and navigate into it.
+You should see the following folders:
+
+* felix-framework-5.0.1
+** bin
+** bundle
+** conf
+** doc
+
+Open a command window at the destionation folder and type
+`java -jar bin/felix.jar`
+
+You should see a similar screen like below.
+image:images/starting_felix.PNG[Starting Felix from the command line]
 
 == Some thoughts on IDEs
 If you are coming from Web Development, no matter which of the big Java IDEs Intellij, Eclipse, Netbeans you use: if you develop Maven based Java EE Applications whether WAR or EAR projects you get a quite good support from your IDE. Also Spring is widly supported within the IDEs e.g. giving you code completion in spring xml configuration or hints in source files.
