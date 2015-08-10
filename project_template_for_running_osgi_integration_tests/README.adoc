@@ -1,5 +1,5 @@
 = Project Template For Running OSGi Integration Tests
-:source-highlighter: pygment
+:source-highlighter: pygments
 I don't want to explain why unit testing is important. In my opinion testing is a standard in software development so it is unnecessary to talk about its need.
 When you use frameworks like Hibernate, Spring, OSGi, Servlets, etc. it becomes essential to prove that you use these frameworks in the intended way. To say it in other words: if you work with Spring you need a test that bootstraps the application context to prove that your bean definitions are working as well as you need a test in which you prove that your Hibernate configurations/mappings are working.
 In that sense you also need a test proving that your piece of software runs properly in an OSGi container.
